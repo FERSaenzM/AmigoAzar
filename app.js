@@ -27,6 +27,7 @@ if (document.getElementById("nombre").value === ""){
     return;
 }
 
-function generaNumeroRandom (){
-    
+function seleccionarNombre (){
+    let numeroRandom = Math.floor(Math.random()*nombreCaja.length)+1;
+    console.log(numeroRandom);
 }
