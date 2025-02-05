@@ -15,19 +15,30 @@ if (document.getElementById("nombre").value === ""){
 }else{
     nombreCaja.push(document.getElementById("nombre").value);    
     
-    asignarNombres("h2",`la lista es la siguiente: `); 
+    asignarNombres("h2",`Se Muestran los Nombres`); 
     asignarNombres("h3",nombreCaja);
     document.getElementById("lista").stylecolor="red";
     
     document.getElementById("nombre").value="";
-    console.log(nombreCaja);
 }
     let cantidadNombres = nombreCaja.length;
-    console.log(cantidadNombres);
     return;
 }
 
 function seleccionarNombre (){
-    let numeroRandom = Math.floor(Math.random()*nombreCaja.length)+1;
-    console.log(numeroRandom);
+if(nombreCaja.length === 1){
+    alert("Ingresa más de un Nombre");
+}else{
+    if (nombreCaja.length === 0){
+        alert("Ingresa al menos dos nombres para continuar");
+
+    }else{
+        document.getElementById("agregar").setAttribute("disabled","true");
+        document.getElementById("nombre").setAttribute("disabled","true");
+
+        let numeroRandom = Math.floor(Math.random()*nombreCaja.length);
+        asignarNombres("h2",`El Amigo Seleccionado es ${nombreCaja[numeroRandom]}`);
+        asignarNombres("h3","----------------------------");
+    }
+}
 }

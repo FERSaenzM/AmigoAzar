@@ -22,14 +22,14 @@
             <h3 class="name-list" id="lista">...</h3>
             <div class="input-wrapper">
                 <input type="text" id="nombre" class="input-name" placeholder="Escribe un nombre">
-                <button class="button-add" onclick="insertoAmigo()">Añadir</button>
+                <button class="button-add" id="agregar" onclick="insertoAmigo()">Añadir</button>
             </div>
            
             <ul id="listaAmigos" class="name-list" aria-labelledby="listaAmigos" role="list"></ul>
             <ul id="resultado" class="result-list" aria-live="polite"></ul>
 
             <div class="button-container">
-                <button class="button-draw" onclick="seleccionarNombre()" aria-label="Sortear amigo secreto">
+                <button class="button-draw" onclick="seleccionarNombre()" id="botonSortear" aria-label="Sortear amigo secreto">
                     <img src="assets/play_circle_outline.png" alt="Ícono para sortear">
                     Sortear amigo
                 </button>
